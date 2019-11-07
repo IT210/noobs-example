@@ -1,0 +1,40 @@
+#light
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BOARD)
+delayt = .1
+value = 0
+idr = 7
+led == 11 #output
+GPIO.setup(led,GPIO.OUT)
+GPIO.output(led, False)
+def rc_time(idr):
+  count= 0
+  
+  GPIO.setup(idr.GIPO.OUT)
+  GPIO.output(idr, False)
+  time.sleep(delayt)
+  
+  GPIO.setup(idr, GPIO.IN)
+  
+  while(GPIO.input(idr) == 0):
+    count += 1
+    
+  return count
+
+try:
+  while Tru:
+    print("ldr value:")
+    value = rc_time(idr)
+    print(value)
+    if(value <= 10000):
+      print("light are ON")
+      GPIO.output(led, True)
+    if(value > 10000):
+      print("Lights are OFF")
+      GPIO.output(led, False)
+except Keyboardinterrup:
+  pass
+finally:
+  GPIO.cleanup()
