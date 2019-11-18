@@ -1,4 +1,25 @@
 #car
-print("car")
+from gpiozero import Robot
 
-#light
+#See motor right is 'right' and motor left is 'left)
+robby = Robot(left=(7,8), right=(9,10)
+robby.forward(0.4)
+robby.right(0.4)
+
+#If they are switched
+robby = Robot(left=(9,10), right(7,8)
+robby.forward(0.4)
+
+#If they turn in the wrong direction
+robby = Robot(left(9,10), right(8,7)
+
+#zigzag
+While True:
+  robot.forward()
+  sleep(3)
+  robot.stop()
+  robot.right()
+  sleep(1)
+  robot.stop()
+
+
